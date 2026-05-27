@@ -20,26 +20,25 @@ img{max-width:100%;display:block}
 .mast-center{display:flex;flex-direction:column;align-items:center;padding:20px 32px 14px}
 .mast-center img{max-height:80px;width:auto}
 .mast-tagline{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gray);margin-top:6px}
-.mast-nav{background:var(--black);display:flex;align-items:center;justify-content:center;padding:10px}
+.mast-nav{background:var(--black);display:flex;align-items:center;justify-content:center;gap:0;padding:10px}
 .mast-nav a{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:#fff;padding:0 20px;transition:color .2s}
 .mast-nav a:hover{color:var(--cyan)}
 .mast-nav .sep{color:#333;font-size:18px}
 
 .ticker{background:var(--cyan);color:var(--black);padding:8px 0;overflow:hidden;display:flex;align-items:center;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
-.ticker-label{background:var(--black);color:var(--cyan);padding:0 16px;flex-shrink:0;font-size:10px;letter-spacing:.2em;line-height:2.2;margin-right:16px}
+.ticker-label{background:var(--black);color:var(--cyan);padding:0 16px;flex-shrink:0;font-size:10px;letter-spacing:.2em;line-height:2;margin-right:16px}
 .ticker-track{display:flex;gap:60px;animation:scroll 28s linear infinite;white-space:nowrap}
 .ticker-track span::before{content:"◆ ";opacity:.5}
 @keyframes scroll{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
 .front{padding:36px 0 72px}
 
-/* HERO */
 .hero{display:grid;grid-template-columns:1fr 360px;border:3px solid var(--black);background:#fff;margin-bottom:28px;overflow:hidden}
 .hero-img{position:relative;min-height:400px;overflow:hidden;background:#111}
-.hero-img img.photo{width:100%;height:100%;object-fit:cover;transition:transform .6s}
-.hero:hover .hero-img img.photo{transform:scale(1.03)}
-.hero-placeholder{width:100%;min-height:400px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#0A0A0A,#1a3a4a)}
-.hero-placeholder img{max-height:220px;opacity:.45}
+.hero-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.hero:hover .hero-img img{transform:scale(1.03)}
+.hero-img-placeholder{width:100%;height:100%;min-height:400px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#0A0A0A,#1a3a4a)}
+.hero-img-placeholder img{max-height:220px;opacity:.45}
 .hero-badge{position:absolute;top:16px;left:16px;background:var(--cyan);color:var(--black);font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;padding:3px 10px}
 .hero-body{padding:28px;border-left:3px solid var(--black);display:flex;flex-direction:column;justify-content:space-between}
 .hero-kicker{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan);margin-bottom:10px}
@@ -51,20 +50,18 @@ img{max-width:100%;display:block}
 .hero-btn{display:inline-block;background:var(--black);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;padding:10px 20px;transition:background .2s,color .2s;align-self:flex-start}
 .hero-btn:hover{background:var(--cyan);color:var(--black)}
 
-/* CARDS */
 .cards{display:grid;grid-template-columns:repeat(3,1fr);border:3px solid var(--black);border-bottom:none;background:#fff;margin-bottom:28px}
 .card{padding:22px;border-right:1px solid #ddd;border-bottom:3px solid var(--black);transition:background .2s;display:flex;flex-direction:column}
 .card:last-child{border-right:none}
 .card:hover{background:#fafaf8}
 .card-img{width:100%;height:165px;object-fit:cover;margin-bottom:12px}
 .card-cat{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:800;letter-spacing:.25em;text-transform:uppercase;color:var(--cyan);margin-bottom:6px}
-.card-title{font-family:'Barlow Condensed',sans-serif;font-size:21px;font-weight:900;text-transform:uppercase;line-height:1.1;margin-bottom:9px;flex:1}
-.card-excerpt{font-size:13px;line-height:1.6;color:var(--midgray);font-weight:300;margin-bottom:12px}
-.card-byline{font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray);margin-bottom:14px}
-.card-link{display:inline-block;background:var(--black);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:8px 16px;transition:background .2s,color .2s;align-self:flex-start}
-.card-link:hover{background:var(--cyan);color:var(--black)}
+.card-title{font-family:'Barlow Condensed',sans-serif;font-size:21px;font-weight:900;text-transform:uppercase;line-height:1.1;margin-bottom:9px}
+.card-excerpt{font-size:13px;line-height:1.6;color:var(--midgray);font-weight:300;flex:1}
+.card-byline{margin-top:10px;font-family:'Barlow Condensed',sans-serif;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray);margin-bottom:14px}
+.card-btn{display:inline-block;background:var(--black);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;padding:8px 14px;transition:background .2s,color .2s;align-self:flex-start}
+.card-btn:hover{background:var(--cyan);color:var(--black)}
 
-/* BANNER AD */
 .banner-ad{background:var(--black);border:3px solid var(--cyan);padding:20px 28px;margin-bottom:28px;display:flex;align-items:center;justify-content:space-between;gap:20px;position:relative}
 .banner-ad::before{content:'PUBLICITÉ';position:absolute;top:-10px;left:14px;background:var(--offwhite);padding:0 8px;font-family:'Barlow Condensed',sans-serif;font-size:9px;letter-spacing:.2em;color:var(--gray)}
 .ba-title{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;text-transform:uppercase;color:var(--cyan)}
@@ -72,8 +69,24 @@ img{max-width:100%;display:block}
 .ba-cta{flex-shrink:0;background:var(--cyan);color:var(--black);font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;padding:11px 22px;white-space:nowrap;transition:background .2s}
 .ba-cta:hover{background:#90E0EF}
 
-/* SIDEBAR */
 .two-col{display:grid;grid-template-columns:1fr 300px;gap:28px}
+
+/* RÉSUMÉ ARTICLE (remplace article full) */
+.art-resume{background:#fff;border:3px solid var(--black);padding:30px;margin-bottom:28px}
+.art-resume.featured{border-left:6px solid var(--cyan)}
+.art-rubrique{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--cyan);border-top:2px solid var(--cyan);padding-top:5px;margin-bottom:12px;display:inline-block}
+.art-kicker{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);margin-bottom:8px}
+.art-title{font-family:'Barlow Condensed',sans-serif;font-size:44px;font-weight:900;text-transform:uppercase;line-height:1;margin-bottom:12px}
+.art-title em{font-style:normal;color:var(--cyan)}
+.art-subtitle{font-size:17px;font-weight:300;line-height:1.55;color:var(--midgray);border-left:3px solid var(--cyan);padding-left:14px;margin-bottom:14px}
+.art-meta{display:flex;gap:14px;align-items:center;font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gray);border-top:1px solid #ddd;border-bottom:1px solid #ddd;padding:7px 0;margin-bottom:16px}
+.art-meta strong{color:var(--black)}
+.art-meta .s{color:#ccc}
+.art-img{width:100%;max-height:320px;object-fit:cover;margin:0 0 16px}
+.art-excerpt{font-size:15px;line-height:1.75;font-weight:300;color:var(--midgray);margin-bottom:20px}
+.art-btn{display:inline-block;background:var(--black);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;padding:10px 22px;transition:background .2s,color .2s}
+.art-btn:hover{background:var(--cyan);color:var(--black)}
+
 .sb-block{background:#fff;border:3px solid var(--black);padding:20px;margin-bottom:22px}
 .sb-block.dark{background:var(--black);color:#fff}
 .sb-block.cyan{background:var(--cyan)}
@@ -92,6 +105,8 @@ img{max-width:100%;display:block}
 .stat-num{font-family:'Barlow Condensed',sans-serif;font-size:64px;font-weight:900;line-height:1;color:var(--black)}
 .stat-label{font-size:13px;margin-top:6px}
 
+hr.div{border:none;border-top:3px solid var(--black);margin:28px 0}
+
 footer{background:var(--black);color:#fff;padding:48px 32px 24px;margin-top:48px}
 .footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:180px 1fr 1fr 1fr;gap:40px;margin-bottom:36px}
 footer img.flogo{max-height:72px}
@@ -101,10 +116,8 @@ footer img.flogo{max-height:72px}
 .footer-bottom{max-width:1200px;margin:0 auto;border-top:1px solid #222;padding-top:18px;display:flex;justify-content:space-between;font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#555}
 .footer-bottom .c{color:var(--cyan)}
 
-hr.div{border:none;border-top:3px solid var(--black);margin:28px 0}
-
 @media(max-width:900px){.hero{grid-template-columns:1fr}.hero-body{border-left:none;border-top:3px solid var(--black)}.cards{grid-template-columns:1fr 1fr}.cards .card:nth-child(2){border-right:none}.two-col{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:600px){.cards{grid-template-columns:1fr}.cards .card{border-right:none}.footer-grid{grid-template-columns:1fr}.hero-title{font-size:28px}.banner-ad{flex-direction:column;text-align:center}}
+@media(max-width:600px){.cards{grid-template-columns:1fr}.cards .card{border-right:none}.footer-grid{grid-template-columns:1fr}.art-title{font-size:30px}.banner-ad{flex-direction:column;text-align:center}}
 </style>
 </head>
 <body>
@@ -126,7 +139,6 @@ hr.div{border:none;border-top:3px solid var(--black);margin:28px 0}
   </nav>
 </header>
 
-<!-- TICKER -->
 <div class="ticker">
   <div class="ticker-label">Flash</div>
   <div class="ticker-track">
@@ -142,11 +154,11 @@ hr.div{border:none;border-top:3px solid var(--black);margin:28px 0}
 <main class="front">
 <div class="container">
 
-  <!-- ══ HERO — pointe vers l'article principal ══ -->
+  <!-- ══ HERO — article principal ══ -->
   <div class="hero">
     <div class="hero-img">
-      <!-- Avec image : <img src="articles/article-001-hero.jpg" class="photo" alt=""/> -->
-      <div class="hero-placeholder">
+      <!-- Avec image : <img src="articles/[IMAGE].jpg" alt=""/> -->
+      <div class="hero-img-placeholder">
         <img src="../../assets/img/logo-mascot.png" alt=""/>
       </div>
       <span class="hero-badge">[CATÉGORIE]</span>
@@ -164,37 +176,32 @@ hr.div{border:none;border-top:3px solid var(--black);margin:28px 0}
     </div>
   </div>
 
-  <!-- ══ RÉSUMÉS DES AUTRES ARTICLES ══ -->
-  <!-- Ajouter / supprimer des .card selon le nombre d'articles -->
+  <!-- ══ RÉSUMÉS 3 ARTICLES ══ -->
   <div class="cards">
-
     <article class="card">
-      <!-- <img src="articles/article-002-thumb.jpg" class="card-img" alt=""/> -->
+      <!-- <img src="articles/[IMG].jpg" class="card-img" alt=""/> -->
       <div class="card-cat">[Catégorie]</div>
       <h2 class="card-title">[TITRE ARTICLE 2]</h2>
       <p class="card-excerpt">[Résumé en 2-3 phrases.]</p>
       <div class="card-byline">Par [Auteur] · [Date]</div>
-      <a href="articles/article-002.html" class="card-link">Lire →</a>
+      <a href="articles/article-002.html" class="card-btn">Lire →</a>
     </article>
-
     <article class="card">
-      <!-- <img src="articles/article-003-thumb.jpg" class="card-img" alt=""/> -->
+      <!-- <img src="articles/[IMG].jpg" class="card-img" alt=""/> -->
       <div class="card-cat">[Catégorie]</div>
       <h2 class="card-title">[TITRE ARTICLE 3]</h2>
       <p class="card-excerpt">[Résumé en 2-3 phrases.]</p>
       <div class="card-byline">Par [Auteur] · [Date]</div>
-      <a href="articles/article-003.html" class="card-link">Lire →</a>
+      <a href="articles/article-003.html" class="card-btn">Lire →</a>
     </article>
-
     <article class="card">
-      <!-- <img src="articles/article-004-thumb.jpg" class="card-img" alt=""/> -->
+      <!-- <img src="articles/[IMG].jpg" class="card-img" alt=""/> -->
       <div class="card-cat">[Catégorie]</div>
       <h2 class="card-title">[TITRE ARTICLE 4]</h2>
       <p class="card-excerpt">[Résumé en 2-3 phrases.]</p>
       <div class="card-byline">Par [Auteur] · [Date]</div>
-      <a href="articles/article-004.html" class="card-link">Lire →</a>
+      <a href="articles/article-004.html" class="card-btn">Lire →</a>
     </article>
-
   </div>
 
   <!-- ══ BANNIÈRE PUB ══ -->
@@ -206,11 +213,43 @@ hr.div{border:none;border-top:3px solid var(--black);margin:28px 0}
     <a href="#" class="ba-cta">[CALL TO ACTION]</a>
   </div>
 
-  <!-- ══ SIDEBAR ══ -->
+  <!-- ══ RÉSUMÉS DÉTAILLÉS + SIDEBAR ══ -->
   <div class="two-col">
     <div>
-      <!-- Zone libre — ajouter d'autres cards ou blocs si besoin -->
+
+      <!-- RÉSUMÉ ARTICLE 1 (featured) -->
+      <article class="art-resume featured">
+        <span class="art-rubrique">[Rubrique]</span>
+        <div class="art-kicker">[Surtitre]</div>
+        <h2 class="art-title">[Titre <em>article 1</em>]</h2>
+        <p class="art-subtitle">[Sous-titre / chapeau]</p>
+        <div class="art-meta">
+          <span>Par <strong>[Auteur]</strong></span><span class="s">·</span>
+          <span>[Date]</span><span class="s">·</span>
+          <span>[Catégorie]</span>
+        </div>
+        <!-- <img src="articles/[IMG].jpg" alt="" class="art-img"/> -->
+        <p class="art-excerpt">[Résumé de l'article. 3-4 phrases qui couvrent l'essentiel sans tout dévoiler. Donner envie de cliquer pour lire la suite.]</p>
+        <a href="articles/article-001.html" class="art-btn">Lire l'article complet →</a>
+      </article>
+
+      <!-- RÉSUMÉ ARTICLE 2 -->
+      <article class="art-resume">
+        <span class="art-rubrique">[Rubrique]</span>
+        <div class="art-kicker">[Surtitre]</div>
+        <h2 class="art-title">[Titre <em>article 2</em>]</h2>
+        <p class="art-subtitle">[Sous-titre]</p>
+        <div class="art-meta">
+          <span>Par <strong>[Auteur]</strong></span><span class="s">·</span><span>[Date]</span>
+        </div>
+        <p class="art-excerpt">[Résumé de l'article 2.]</p>
+        <a href="articles/article-002.html" class="art-btn">Lire l'article complet →</a>
+      </article>
+
+      <!-- Dupliquer .art-resume pour chaque article supplémentaire -->
+
     </div>
+
     <aside>
       <div class="sb-block">
         <div class="sb-title">En bref</div>
@@ -223,13 +262,18 @@ hr.div{border:none;border-top:3px solid var(--black);margin:28px 0}
       </div>
       <div class="sb-block dark ad-sb">
         <div class="ad-title">[Nom commerce]</div>
-        <div class="ad-body">[Texte pub court.]</div>
+        <div class="ad-body">[Texte pub. 1-2 phrases max.]</div>
         <a href="#" class="ad-btn">[Action]</a>
       </div>
       <div class="sb-block cyan">
         <div class="sb-title">Chiffre de l'édition</div>
         <div class="stat-num">[123]</div>
         <div class="stat-label">[Ce que représente ce chiffre]</div>
+      </div>
+      <div class="sb-block dark ad-sb">
+        <div class="ad-title">[Nom commerce 2]</div>
+        <div class="ad-body">[Texte pub.]</div>
+        <a href="#" class="ad-btn">[Action]</a>
       </div>
       <div class="sb-block dark">
         <div class="sb-title">Prochain numéro</div>
@@ -238,12 +282,38 @@ hr.div{border:none;border-top:3px solid var(--black);margin:28px 0}
     </aside>
   </div>
 
+  <!-- ══ ARTICLES BONUS ══ -->
+  <hr class="div"/>
+  <div class="cards">
+    <article class="card">
+      <div class="card-cat">[Catégorie]</div>
+      <h2 class="card-title">[Titre article bonus 1]</h2>
+      <p class="card-excerpt">[Résumé...]</p>
+      <div class="card-byline">Par [Auteur] · [Date]</div>
+      <a href="articles/article-005.html" class="card-btn">Lire →</a>
+    </article>
+    <article class="card">
+      <div class="card-cat">[Catégorie]</div>
+      <h2 class="card-title">[Titre article bonus 2]</h2>
+      <p class="card-excerpt">[Résumé...]</p>
+      <div class="card-byline">Par [Auteur] · [Date]</div>
+      <a href="articles/article-006.html" class="card-btn">Lire →</a>
+    </article>
+    <article class="card">
+      <div class="card-cat">[Catégorie]</div>
+      <h2 class="card-title">[Titre article bonus 3]</h2>
+      <p class="card-excerpt">[Résumé...]</p>
+      <div class="card-byline">Par [Auteur] · [Date]</div>
+      <a href="articles/article-007.html" class="card-btn">Lire →</a>
+    </article>
+  </div>
+
 </div>
 </main>
 
 <footer>
   <div class="footer-grid">
-    <div><img src="../../assets/img/logo-mascot.png" alt="" class="flogo"/></div>
+    <div><img src="../../assets/img/logo-mascot.png" alt="Le Karmine Déchaîné" class="flogo"/></div>
     <div class="fcol">
       <div class="fcol-title">Le Journal</div>
       <p>Le Karmine Déchaîné — journalisme indépendant, libre et sans chaînes.</p>
