@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Le Karmine Déchaîné — [TITRE ARTICLE]</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Source+Serif+4:ital,wght@0,300;0,400;1,400&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--cyan:#00B4D8;--black:#0A0A0A;--offwhite:#F4F3EF;--gray:#6B6B6B;--midgray:#3A3A3A}
+body{background:var(--offwhite);font-family:'Source Serif 4',Georgia,serif;color:var(--black);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{max-width:860px;margin:0 auto;padding:0 32px}
+
+.mast{background:#fff;border-bottom:3px solid var(--black)}
+.mast-top{display:flex;align-items:center;justify-content:space-between;padding:8px 32px;border-bottom:1px solid #ddd;font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--gray)}
+.mast-top strong{color:var(--cyan)}
+.mast-top a{color:var(--gray);transition:color .2s}.mast-top a:hover{color:var(--cyan)}
+.mast-center{display:flex;flex-direction:column;align-items:center;padding:20px 32px 14px}
+.mast-center img{max-height:80px;width:auto}
+.mast-tagline{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gray);margin-top:6px}
+.mast-nav{background:var(--black);display:flex;align-items:center;justify-content:center;padding:10px}
+.mast-nav a{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:#fff;padding:0 20px;transition:color .2s}
+.mast-nav a:hover{color:var(--cyan)}
+.mast-nav .sep{color:#333;font-size:18px}
+
+.article-page{padding:48px 0 80px}
+
+.breadcrumb{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--gray);margin-bottom:32px}
+.breadcrumb a{color:var(--cyan);transition:color .2s}.breadcrumb a:hover{color:var(--black)}
+.breadcrumb span{margin:0 8px;color:#ccc}
+
+.art-rubrique{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--cyan);border-top:2px solid var(--cyan);padding-top:5px;margin-bottom:12px;display:inline-block}
+.art-kicker{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);margin-bottom:8px}
+.art-title{font-family:'Barlow Condensed',sans-serif;font-size:52px;font-weight:900;text-transform:uppercase;line-height:1;margin-bottom:14px}
+.art-title em{font-style:normal;color:var(--cyan)}
+.art-subtitle{font-size:18px;font-weight:300;line-height:1.55;color:var(--midgray);border-left:3px solid var(--cyan);padding-left:14px;margin-bottom:16px}
+.art-meta{display:flex;gap:14px;align-items:center;font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gray);border-top:1px solid #ddd;border-bottom:1px solid #ddd;padding:8px 0;margin-bottom:0}
+.art-meta strong{color:var(--black)}
+.art-meta .s{color:#ccc}
+
+.art-hero-img{width:100%;max-height:480px;object-fit:cover;margin:28px 0 8px}
+.art-caption{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:.08em;color:var(--gray);text-transform:uppercase;margin-bottom:28px;border-left:2px solid var(--cyan);padding-left:8px}
+
+.art-body{font-size:16px;line-height:1.8;font-weight:300;margin-top:28px}
+.art-body p{margin-bottom:1.2em}
+.art-body .dc::first-letter{float:left;font-family:'Barlow Condensed',sans-serif;font-size:78px;font-weight:900;line-height:.82;margin:6px 10px 0 0;color:var(--cyan);text-transform:uppercase}
+.art-body h3{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;margin:28px 0 10px;color:var(--black)}
+.art-body blockquote{border-left:4px solid var(--cyan);padding:12px 20px;margin:20px 0;font-size:20px;font-style:italic;color:var(--black);background:#F0F9FB}
+.art-body img{width:100%;margin:20px 0 6px;max-height:400px;object-fit:cover}
+.art-body .img-caption{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:.08em;color:var(--gray);text-transform:uppercase;margin-bottom:20px;border-left:2px solid var(--cyan);padding-left:8px}
+
+/* AD inline */
+.ad-inline{background:var(--black);border:2px solid var(--cyan);padding:18px 24px;margin:28px 0;display:flex;align-items:center;justify-content:space-between;gap:16px;position:relative}
+.ad-inline::before{content:'PUBLICITÉ';position:absolute;top:-10px;left:12px;background:var(--offwhite);padding:0 6px;font-family:'Barlow Condensed',sans-serif;font-size:9px;letter-spacing:.2em;color:var(--gray)}
+.ad-inline .ad-title{font-family:'Barlow Condensed',sans-serif;font-size:20px;font-weight:900;text-transform:uppercase;color:var(--cyan)}
+.ad-inline .ad-body{font-size:12px;color:#999;font-weight:300;margin-top:3px}
+.ad-inline .ad-btn{flex-shrink:0;background:var(--cyan);color:var(--black);font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;padding:8px 16px}
+
+.nav-articles{display:flex;justify-content:space-between;gap:16px;margin-top:48px;padding-top:24px;border-top:3px solid var(--black)}
+.nav-art-btn{background:#fff;border:2px solid var(--black);padding:14px 20px;font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;transition:background .2s,color .2s;max-width:48%}
+.nav-art-btn:hover{background:var(--cyan);border-color:var(--cyan)}
+.nav-art-btn .nav-label{font-size:9px;color:var(--gray);display:block;margin-bottom:4px;letter-spacing:.2em}
+.nav-art-btn .nav-title{font-size:13px;font-weight:800;color:var(--black);line-height:1.2}
+
+footer{background:var(--black);color:#fff;padding:48px 32px 24px;margin-top:48px}
+.footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:180px 1fr 1fr 1fr;gap:40px;margin-bottom:36px}
+footer img.flogo{max-height:72px}
+.fcol-title{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan);margin-bottom:14px}
+.fcol p,.fcol li{font-size:13px;color:#999;font-weight:300;line-height:1.7;list-style:none}
+.fcol a:hover{color:var(--cyan)}
+.footer-bottom{max-width:1200px;margin:0 auto;border-top:1px solid #222;padding-top:18px;display:flex;justify-content:space-between;font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#555}
+.footer-bottom .c{color:var(--cyan)}
+
+@media(max-width:700px){.art-title{font-size:36px}.nav-articles{flex-direction:column}.nav-art-btn{max-width:100%}.footer-grid{grid-template-columns:1fr}.ad-inline{flex-direction:column;text-align:center}}
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <div class="mast-top">
+    <span><strong>ÉDITION N°001</strong> &nbsp;·&nbsp; [DATE]</span>
+    <a href="../index.html">← Retour à l'édition</a>
+  </div>
+  <div class="mast-center">
+    <img src="../../../assets/img/logo-banner.png" alt="Le Karmine Déchaîné"/>
+    <span class="mast-tagline">Journalisme indépendant, libre et sans chaînes</span>
+  </div>
+  <nav class="mast-nav">
+    <a href="../../../index.html">🔍 Enquêtes</a><span class="sep">|</span>
+    <a href="../../../index.html">📰 Scoops</a><span class="sep">|</span>
+    <a href="../../../index.html">📣 Publicité</a><span class="sep">|</span>
+    <a href="../../../index.html">🎙️ Interviews &amp; FAQ</a>
+  </nav>
+</header>
+
+<main class="article-page">
+<div class="container">
+
+  <div class="breadcrumb">
+    <a href="../../../index.html">Accueil</a><span>›</span>
+    <a href="../index.html">Édition N°001</a><span>›</span>
+    [TITRE COURT]
+  </div>
+
+  <!-- EN-TÊTE ARTICLE -->
+  <span class="art-rubrique">[Rubrique]</span>
+  <div class="art-kicker">[Surtitre]</div>
+  <h1 class="art-title">[Titre complet <em>de l'article</em>]</h1>
+  <p class="art-subtitle">[Sous-titre / chapeau : 1-2 phrases de mise en contexte]</p>
+  <div class="art-meta">
+    <span>Par <strong>[Auteur]</strong></span><span class="s">·</span>
+    <span>[Date]</span><span class="s">·</span>
+    <span>[Catégorie]</span>
+  </div>
+
+  <!-- IMAGE PRINCIPALE (optionnel — supprimer si pas d'image) -->
+  <!-- <img src="article-003-hero.jpg" alt="[Description]" class="art-hero-img"/>
+  <div class="art-caption">📷 [Légende de la photo]</div> -->
+
+  <!-- CORPS DE L'ARTICLE -->
+  <div class="art-body">
+    <p class="dc">[Premier paragraphe. La première lettre sera en drop-cap. Écrire le texte directement, sans espace avant.]</p>
+    <p>[Deuxième paragraphe. Développement des faits.]</p>
+    <p>[Troisième paragraphe.]</p>
+
+    <!-- Sous-titre de section (optionnel) -->
+    <h3>[Sous-titre de section]</h3>
+    <p>[Suite de l'article...]</p>
+
+    <!-- Citation mise en avant (optionnel) -->
+    <blockquote>"[Citation importante]"<br><em>— [Auteur de la citation]</em></blockquote>
+
+    <p>[Suite...]</p>
+
+    <!-- Image en milieu d'article (optionnel) -->
+    <!-- <img src="article-003-photo2.jpg" alt=""/>
+    <div class="img-caption">📷 [Légende]</div> -->
+
+    <!-- Pub inline (optionnel) -->
+    <div class="ad-inline">
+      <div>
+        <div class="ad-title">[Nom commerce]</div>
+        <div class="ad-body">[Texte pub court.]</div>
+      </div>
+      <a href="#" class="ad-btn">[Action]</a>
+    </div>
+
+    <p>[Avant-dernier paragraphe.]</p>
+    <p>[Conclusion / chute de l'article.]</p>
+  </div>
+
+  <!-- NAVIGATION ENTRE ARTICLES -->
+  <nav class="nav-articles">
+    <!-- Supprimer si premier article -->
+    <a href="article-000.html" class="nav-art-btn">
+      <span class="nav-label">← Article précédent</span>
+      <span class="nav-title">[Titre article précédent]</span>
+    </a>
+    <!-- Supprimer si dernier article -->
+    <a href="article-002.html" class="nav-art-btn" style="text-align:right;margin-left:auto">
+      <span class="nav-label">Article suivant →</span>
+      <span class="nav-title">[Titre article suivant]</span>
+    </a>
+  </nav>
+
+</div>
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div><img src="../../../assets/img/logo-mascot.png" alt="" class="flogo"/></div>
+    <div class="fcol">
+      <div class="fcol-title">Le Journal</div>
+      <p>Le Karmine Déchaîné — journalisme indépendant, libre et sans chaînes.</p>
+    </div>
+    <div class="fcol">
+      <div class="fcol-title">Édition N°001</div>
+      <ul>
+        <li><a href="article-003.html">[Article 3]</a></li>
+        <li><a href="article-002.html">[Article 2]</a></li>
+        <li><a href="article-003.html">[Article 3]</a></li>
+      </ul>
+    </div>
+    <div class="fcol">
+      <div class="fcol-title">Navigation</div>
+      <ul>
+        <li><a href="../index.html">← Retour à l'édition</a></li>
+        <li><a href="../../../index.html">← Toutes les éditions</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© Le Karmine Déchaîné</span>
+    <span>Édition N°001 · <span class="c">Journalisme libre et sans chaînes</span></span>
+  </div>
+</footer>
+
+</body>
+</html>
