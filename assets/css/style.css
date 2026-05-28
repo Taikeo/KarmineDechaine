@@ -1,4 +1,11 @@
 
+/* ===== FIX SCROLL HORIZONTAL ===== */
+html{overflow-x:hidden;width:100%}
+body{overflow-x:hidden;width:100%}
+.container{width:100%;max-width:1200px;margin:0 auto;padding:0 32px}
+img{max-width:100%;height:auto}
+table{max-width:100%;overflow-x:auto;display:block}
+
 
 /* From index.html */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -128,7 +135,7 @@ img{max-width:100%;display:block}
 .ba-cta{flex-shrink:0;background:var(--cyan);color:var(--black);font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;padding:11px 22px;white-space:nowrap;transition:background .2s}
 .ba-cta:hover{background:#90E0EF}
 
-.two-col{display:grid;grid-template-columns:1fr 300px;gap:28px}
+.two-col{display:grid;grid-template-columns:1fr 280px;gap:28px}
 
 /* RÉSUMÉ ARTICLE (remplace article full) */
 .art-resume{background:#fff;border:3px solid var(--black);padding:30px;margin-bottom:28px}
