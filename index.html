@@ -71,6 +71,15 @@ footer img.flogo{max-height:120px}
 </head>
 <body>
 
+<div class="breaking-news">
+  <div class="breaking-label">BREAKING NEWS</div>
+  <div class="breaking-track">
+    <span>💀 PRIME DE 20 000 KCOINS SUR ALLAN LEONARD — INDIVIDU CONSIDÉRÉ DANGEREUX — INFORMATIONS À TRANSMETTRE AUX BALAZUR</span>
+    <span>💀 PRIME DE 20 000 KCOINS SUR ALLAN LEONARD — INDIVIDU CONSIDÉRÉ DANGEREUX — INFORMATIONS À TRANSMETTRE AUX BALAZUR</span>
+  </div>
+</div>
+
+
 <header class="mast">
   <div class="mast-top">
     <span><strong>LE KARMINE DÉCHAÎNÉ</strong> &nbsp;·&nbsp; Journal officiel</span>
@@ -103,7 +112,7 @@ footer img.flogo{max-height:120px}
       <div class="feat-num">Édition N°001</div>
       <h2 class="feat-title">Titre de la <em>une</em> ici</h2>
       <p class="feat-desc">Description courte de l'édition. 2-3 phrases qui donnent envie de lire.</p>
-      <div class="feat-meta">Publié le [DATE] &nbsp;·&nbsp; [N] articles</div>
+      <div class="feat-meta">Publié le ÉDITION 001 &nbsp;·&nbsp; [N] articles</div>
       <a href="editions/edition-001/index.html" class="feat-link">Lire l'édition →</a>
     </div>
     <div class="feat-cover">
@@ -160,5 +169,24 @@ footer img.flogo{max-height:120px}
   const d = new Date();
   document.getElementById('js-date').textContent = d.toLocaleDateString('fr-FR',{weekday:'long',year:'numeric',month:'long',day:'numeric'});
 </script>
+
+<section class="edition-extra-articles">
+  <h2>Dans cette édition</h2>
+  <div class="edition-extra-grid">
+    <article class="edition-extra-card">
+      <p class="kd-cat">Offres d'emploi</p>
+      <h3>CHERCHE EMPLOI : GEORGES FROG, UN HOMME DE TALENT EN QUÊTE D'OPPORTUNITÉ</h3>
+      <p>Georges Frog cherche une opportunité. Employeurs, guildes et entrepreneurs : un profil motivé attend sa chance.</p>
+      <a href="articles/article-002.html">LIRE L'ARTICLE →</a>
+    </article>
+    <article class="edition-extra-card">
+      <p class="kd-cat">Enquête</p>
+      <h3>CRIME ODIEUX : BOO, LE HAPPY GHAST BIEN-AIMÉ, ASSASSINÉ DE SANG-FROID</h3>
+      <p>Boo, Happy Ghast adoré des Balazur, a été kidnappé puis tué. Le territoire est sous le choc.</p>
+      <a href="articles/article-003.html">LIRE L'ARTICLE →</a>
+    </article>
+  </div>
+</section>
+
 </body>
 </html>
