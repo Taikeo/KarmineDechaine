@@ -20,8 +20,8 @@ img{max-width:100%;display:block}
 .mast-center{display:flex;flex-direction:column;align-items:center;padding:20px 32px 14px}
 .mast-center img{max-height:80px;width:auto}
 .mast-tagline{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gray);margin-top:6px}
-.mast-nav{background:var(--black);display:flex;align-items:center;justify-content:center;padding:10px}
-.mast-nav a{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:#fff;padding:0 20px;transition:color .2s}
+.mast-nav{background:var(--black);display:flex;align-items:center;justify-content:center;padding:8px}
+.mast-nav a{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#fff;padding:0 32px;transition:color .2s}
 .mast-nav a:hover{color:var(--cyan)}
 .mast-nav .sep{color:#333;font-size:18px}
 
@@ -65,7 +65,7 @@ img{max-width:100%;display:block}
 .nav-art-btn .nav-title{font-size:13px;font-weight:800;color:var(--black);line-height:1.2}
 
 footer{background:var(--black);color:#fff;padding:48px 32px 24px;margin-top:48px}
-.footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:180px 1fr 1fr 1fr;gap:40px;margin-bottom:36px}
+.footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:180px 1fr 1fr 1fr 1fr;gap:40px;margin-bottom:36px}
 footer img.flogo{max-height:72px}
 .fcol-title{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan);margin-bottom:14px}
 .fcol p,.fcol li{font-size:13px;color:#999;font-weight:300;line-height:1.7;list-style:none}
@@ -169,25 +169,22 @@ footer img.flogo{max-height:72px}
 
 <footer>
   <div class="footer-grid">
-    <div><img src="../../../assets/img/logo-mascot.png" alt="" class="flogo" style="mix-blend-mode:multiply;background:transparent;"/></div>
+    <div><img src="../../../assets/img/logo-mascot.png" alt="" class="flogo"/></div>
     <div class="fcol">
       <div class="fcol-title">Le Journal</div>
       <p>Le Karmine Déchaîné — journalisme indépendant, libre et sans chaînes.</p>
     </div>
     <div class="fcol">
-      <div class="fcol-title">Édition N°001</div>
-      <ul>
-        <li><a href="article-001.html">[Article 1]</a></li>
-        <li><a href="article-002.html">[Article 2]</a></li>
-        <li><a href="article-003.html">[Article 3]</a></li>
-      </ul>
+      <div class="fcol-title">Éditions</div>
+      <ul><li><a href="../../../editions/edition-001/index.html">Édition N°001</a></li></ul>
     </div>
     <div class="fcol">
-      <div class="fcol-title">Navigation</div>
-      <ul>
-        <li><a href="../index.html">← Retour à l'édition</a></li>
-        <li><a href="../../../index.html">← Toutes les éditions</a></li>
-      </ul>
+      <div class="fcol-title">Enquêtes</div>
+      <ul><li><a href="../../../index.html#enquetes">Toutes les enquêtes</a></li></ul>
+    </div>
+    <div class="fcol">
+      <div class="fcol-title">Interviews</div>
+      <ul><li><a href="../../../index.html#interviews">Toutes les interviews</a></li></ul>
     </div>
   </div>
   <div class="footer-bottom">
