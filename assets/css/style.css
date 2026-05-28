@@ -110,7 +110,7 @@ img{max-width:100%;display:block}
 .hero-btn:hover{background:var(--cyan);color:var(--black)}
 
 .cards{display:grid;grid-template-columns:repeat(3,1fr);border:3px solid var(--black);border-bottom:none;background:#fff;margin-bottom:28px}
-.card{padding:22px;border-right:1px solid #ddd;border-bottom:3px solid var(--black);transition:background .2s;display:flex;flex-direction:column}
+.card{padding:14px 18px;border-right:1px solid #ddd;border-bottom:3px solid var(--black);transition:background .2s;display:flex;flex-direction:column}
 .card:last-child{border-right:none}
 .card:hover{background:#fafaf8}
 .card-img{width:100%;height:165px;object-fit:cover;margin-bottom:12px}
@@ -121,8 +121,8 @@ img{max-width:100%;display:block}
 .card-btn{display:inline-block;background:var(--black);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;padding:8px 14px;transition:background .2s,color .2s;align-self:flex-start}
 .card-btn:hover{background:var(--cyan);color:var(--black)}
 
-.banner-ad{background:var(--black);border:3px solid var(--cyan);padding:20px 28px;margin-bottom:28px;display:flex;align-items:center;justify-content:space-between;gap:20px;position:relative}
-.banner-ad::before{content:'PUBLICITÉ';position:absolute;top:-10px;left:14px;background:var(--offwhite);padding:0 8px;font-family:'Barlow Condensed',sans-serif;font-size:9px;letter-spacing:.2em;color:var(--gray)}
+.banner-ad{background:var(--black);border:3px solid var(--cyan);padding:20px 28px;margin-bottom:28px;display:flex;align-items:center;justify-content:space-between;gap:20px;position:relative;margin-top:0}
+
 .ba-title{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;text-transform:uppercase;color:var(--cyan)}
 .ba-body{font-size:13px;color:#999;font-weight:300;margin-top:4px}
 .ba-cta{flex-shrink:0;background:var(--cyan);color:var(--black);font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;padding:11px 22px;white-space:nowrap;transition:background .2s}
