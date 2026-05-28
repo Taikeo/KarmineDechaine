@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Le Karmine Déchaîné — Édition N°001</title>
 <link rel="icon" type="image/x-icon" href="../../assets/img/favicon.ico"/>
+<link rel="icon" type="image/png" href="../../assets/img/favicon.png"/>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Source+Serif+4:ital,wght@0,300;0,400;1,400&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -39,6 +40,7 @@ img{max-width:100%;display:block}
 .hero-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
 .hero:hover .hero-img img{transform:scale(1.03)}
 .hero-img-placeholder{width:100%;height:100%;min-height:400px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#0A0A0A,#1a3a4a)}
+.hero-main-img{width:100%;height:100%;object-fit:cover;display:block;filter:contrast(1.05)}
 .hero-img-placeholder img{max-height:220px;opacity:.45}
 .hero-badge{position:absolute;top:16px;left:16px;background:var(--cyan);color:var(--black);font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;padding:3px 10px}
 .hero-body{padding:28px;border-left:3px solid var(--black);display:flex;flex-direction:column;justify-content:space-between}
@@ -157,20 +159,17 @@ footer img.flogo{max-height:120px}
   <!-- ══ HERO — article principal ══ -->
   <div class="hero">
     <div class="hero-img">
-      <!-- Avec image : <img src="articles/[IMAGE].jpg" alt=""/> -->
-      <div class="hero-img-placeholder">
-        <img src="../../assets/img/logo-mascot.png" alt=""/>
-      </div>
-      <span class="hero-badge">[CATÉGORIE]</span>
+      <img src="articles/article-001-team.webp" alt="Les frères Bodin, équipe du Karmine Déchaîné" class="hero-main-img"/>
+      <span class="hero-badge">Vie du journal</span>
     </div>
     <div class="hero-body">
       <div>
-        <div class="hero-kicker">[SURTITRE]</div>
-        <h1 class="hero-title">[TITRE <em>ARTICLE 1</em>]</h1>
-        <p class="hero-deck">[Chapeau. 2-3 phrases d'accroche.]</p>
+        <div class="hero-kicker">Édition spéciale lancement</div>
+        <h1 class="hero-title">Derrière l'Encre : <em>Le Karmine Déchaîné</em></h1>
+        <p class="hero-deck">Avant de sortir les scoops, il fallait présenter ceux qui tiennent la plume. Découvrez les frères Bodin, le trio fondateur d’un journal indépendant, libre et déterminé à faire parler le territoire.</p>
       </div>
       <div>
-        <div class="hero-byline">Par <strong>[AUTEUR]</strong> · [DATE]</div>
+        <div class="hero-byline">Par <strong>La Rédaction</strong> · Mai 2026</div>
         <a href="articles/article-001.html" class="hero-btn">Lire l'article →</a>
       </div>
     </div>
@@ -181,7 +180,7 @@ footer img.flogo{max-height:120px}
     <article class="card">
       <!-- <img src="articles/[IMG].jpg" class="card-img" alt=""/> -->
       <div class="card-cat">[Catégorie]</div>
-      <h2 class="card-title">DERRIÈRE L'ENCRE : LE KARMINE DÉCHAÎNÉTICLE 2]</h2>
+      <h2 class="card-title">[Titre article 2]</h2>
       <p class="card-excerpt">[Résumé en 2-3 phrases.]</p>
       <div class="card-byline">Par [Auteur] · [Date]</div>
       <a href="articles/article-002.html" class="card-btn">Lire →</a>
@@ -189,7 +188,7 @@ footer img.flogo{max-height:120px}
     <article class="card">
       <!-- <img src="articles/[IMG].jpg" class="card-img" alt=""/> -->
       <div class="card-cat">[Catégorie]</div>
-      <h2 class="card-title">DERRIÈRE L'ENCRE : LE KARMINE DÉCHAÎNÉTICLE 3]</h2>
+      <h2 class="card-title">[Titre article 3]</h2>
       <p class="card-excerpt">[Résumé en 2-3 phrases.]</p>
       <div class="card-byline">Par [Auteur] · [Date]</div>
       <a href="articles/article-003.html" class="card-btn">Lire →</a>
@@ -197,7 +196,7 @@ footer img.flogo{max-height:120px}
     <article class="card">
       <!-- <img src="articles/[IMG].jpg" class="card-img" alt=""/> -->
       <div class="card-cat">[Catégorie]</div>
-      <h2 class="card-title">DERRIÈRE L'ENCRE : LE KARMINE DÉCHAÎNÉTICLE 4]</h2>
+      <h2 class="card-title">[Titre article 4]</h2>
       <p class="card-excerpt">[Résumé en 2-3 phrases.]</p>
       <div class="card-byline">Par [Auteur] · [Date]</div>
       <a href="articles/article-004.html" class="card-btn">Lire →</a>
@@ -337,13 +336,6 @@ footer img.flogo{max-height:120px}
   </div>
 </footer>
 
-
-<div style="margin:40px auto;max-width:900px;text-align:center;">
-<img src="../../../../2026-05-27_23.34.51.webp" style="width:100%;max-width:700px;border-radius:12px;">
-<p style="font-size:18px;margin-top:15px;">
-Découvrez les frères Bodin, les fondateurs du Karmine Déchaîné, dans une édition spéciale lancement mêlant indépendance, convictions et passion du journalisme.
-</p>
-</div>
 
 </body>
 </html>
