@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Le Karmine Déchaîné — Archives</title>
+<title>Le Karmine Déchaîné</title>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Source+Serif+4:ital,wght@0,300;0,400;1,400&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -12,19 +12,19 @@ body{background:var(--offwhite);font-family:'Source Serif 4',Georgia,serif;color
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
 
-.mast{background:#fff;border-bottom:3px solid var(--black)}
-.mast-top{display:flex;align-items:center;justify-content:space-between;padding:8px 32px;border-bottom:1px solid #ddd;font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--gray)}
-.mast-top strong{color:var(--cyan)}
-.mast-center{display:flex;flex-direction:column;align-items:center;padding:20px 32px 14px}
+.mast{background:var(--black);border-bottom:3px solid var(--black)}
+.mast-top{display:flex;align-items:center;justify-content:space-between;padding:8px 32px;border-bottom:1px solid #222;font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--gray)}
+.mast-top strong{color:var(--cyan)}.mast-top{color:#888}
+.mast-center{display:flex;flex-direction:column;align-items:center;padding:16px 32px 12px;background:var(--black)}
 .mast-center img{max-height:80px;width:auto}
-.mast-tagline{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--gray);margin-top:6px}
+.mast-tagline{font-family:'Barlow Condensed',sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#888;margin-top:6px}
 .mast-nav{background:var(--black);display:flex;align-items:center;justify-content:center;padding:8px}
 .mast-nav a{font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#fff;padding:0 32px;transition:color .2s}
 .mast-nav a:hover{color:var(--cyan)}
 .mast-nav .sep{color:#333;font-size:18px}
 
 .archive-hero{background:var(--black);padding:56px 32px;text-align:center;border-bottom:4px solid var(--cyan)}
-.archive-hero img{max-height:110px;margin:0 auto 16px}
+.archive-hero img{max-height:120px;margin:0 auto 16px;opacity:1}
 .archive-hero p{font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#888}
 
 .section{max-width:1200px;margin:0 auto;padding:48px 32px 80px}
@@ -41,7 +41,7 @@ img{max-width:100%;display:block}
 .feat-link{display:inline-block;background:var(--black);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;padding:10px 24px;transition:background .2s,color .2s}
 .feat-link:hover{background:var(--cyan);color:var(--black)}
 .feat-cover{background:var(--black);border-left:3px solid var(--black);display:flex;align-items:center;justify-content:center}
-.feat-cover img{max-height:140px;opacity:.4}
+.feat-cover img{max-height:180px;opacity:1}
 
 .editions-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--black);border:3px solid var(--black)}
 .ed-card{background:#fff;display:flex;flex-direction:column;transition:transform .2s;overflow:hidden}
@@ -76,18 +76,18 @@ footer img.flogo{max-height:72px}
     <span id="js-date"></span>
   </div>
   <div class="mast-center">
-    <img src="assets/img/logo-banner.png" alt="Le Karmine Déchaîné" style="mix-blend-mode:multiply;background:transparent;"/>
+    <img src="assets/img/logo-banner.png" alt="Le Karmine Déchaîné"/>
     <span class="mast-tagline">Journalisme indépendant, libre et sans chaînes</span>
   </div>
   <nav class="mast-nav">
-    <a href="editions/edition-001/index.html">📰 Éditions</a><span class="sep">|</span>
-    <a href="index.html#enquetes">🔍 Enquêtes</a><span class="sep">|</span>
-    <a href="index.html#interviews">🎙️ Interviews</a>
+    <a href="editions/edition-001/index.html">Éditions</a><span class="sep">|</span>
+    <a href="index.html#enquetes">Enquêtes</a><span class="sep">|</span>
+    <a href="index.html#interviews">Interviews</a>
   </nav>
 </header>
 
 <section class="archive-hero">
-  <img src="assets/img/logo-mascot.png" alt="" style="mix-blend-mode:multiply;background:transparent;"/>
+  <img src="assets/img/logo-mascot.png" alt=""/>
   <p>Archives complètes · Toutes les éditions</p>
 </section>
 
@@ -106,7 +106,7 @@ footer img.flogo{max-height:72px}
       <a href="editions/edition-001/index.html" class="feat-link">Lire l'édition →</a>
     </div>
     <div class="feat-cover">
-      <img src="assets/img/logo-mascot.png" alt="" style="mix-blend-mode:multiply;background:transparent;"/>
+      <img src="assets/img/logo-mascot.png" alt=""/>
     </div>
   </div>
 
@@ -116,7 +116,7 @@ footer img.flogo{max-height:72px}
 
     <!-- ══ DUPLIQUER CE BLOC POUR CHAQUE NOUVELLE ÉDITION ══ -->
     <article class="ed-card">
-      <div class="ed-placeholder"><img src="assets/img/logo-mascot.png" alt="" style="mix-blend-mode:multiply;background:transparent;"/></div>
+      <div class="ed-placeholder"><img src="assets/img/logo-mascot.png" alt=""/></div>
       <!-- Si image de couverture : <img src="editions/edition-001/cover.jpg" class="ed-cover" alt=""/> -->
       <div class="ed-body">
         <div class="ed-num">Édition N°001</div>
