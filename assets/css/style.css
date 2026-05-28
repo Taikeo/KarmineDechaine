@@ -18,7 +18,7 @@ img{max-width:100%;display:block}
 .mast-nav a:hover{color:var(--cyan)}
 .mast-nav .sep{color:#333;font-size:18px}
 
-.archive-hero{background:var(--black);padding:56px 32px;text-align:center;border-bottom:4px solid var(--cyan)}
+.archive-hero{background:var(--black);padding:28px 32px;text-align:center;border-bottom:4px solid var(--cyan)}
 .archive-hero img{max-height:120px;margin:0 auto 16px;opacity:1}
 .archive-hero p{font-family:'Barlow Condensed',sans-serif;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#888}
 
