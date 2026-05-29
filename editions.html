@@ -3,24 +3,18 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Le Karmine Déchaîné — Enquêtes</title>
+<title>Le Karmine Déchaîné — Toutes les éditions</title>
 <link rel="stylesheet" href="assets/css/style.css"/>
 <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico"/>
 <link rel="icon" type="image/png" href="assets/img/favicon.png"/>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZQG9XRWKCQ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-ZQG9XRWKCQ');
-  </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZQG9XRWKCQ"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-ZQG9XRWKCQ');</script>
 </head>
 <body>
 
 <header class="mast">
   <div class="mast-top">
-    <span><strong>LE KARMINE DÉCHAÎNÉ</strong> &nbsp;·&nbsp; Enquêtes</span>
+    <span><strong>LE KARMINE DÉCHAÎNÉ</strong> &nbsp;·&nbsp; Toutes les éditions</span>
     <span id="js-date"></span>
   </div>
   <div class="mast-center" style="cursor:pointer" onclick="window.location='index.html'">
@@ -28,41 +22,60 @@
     <span class="mast-tagline">Journalisme indépendant, libre et sans chaînes</span>
   </div>
   <nav class="mast-nav">
-    <a href="editions.html">Éditions</a><span class="sep">|</span>
-    <a href="enquetes.html" style="color:var(--cyan)">Enquêtes</a><span class="sep">|</span>
+    <a href="editions.html" style="color:var(--cyan)">Éditions</a><span class="sep">|</span>
+    <a href="enquetes.html">Enquêtes</a><span class="sep">|</span>
     <a href="interviews.html">Interviews</a>
   </nav>
 </header>
+
 <div class="ticker">
   <div class="ticker-label">Flash</div>
   <div class="ticker-track">
-    <span>VANDALISME À L'HÔPITAL — APPEL À TÉMOINS</span>
-    <span>INFORMATIONS À TRANSMETTRE AUX BELAZUR</span>
+    <span>AFFAIRE BOO — CHRONOLOGIE COMPLÈTE RÉVÉLÉE</span>
+    <span>DAME DIANE KIDNAPPÉE ET ABANDONNÉE EN MER</span>
     <span>PRIME DE 35 005 KCOINS SUR ALAN LEONHART</span>
     <span>ALAN LEONHART CONSIDÉRÉ DANGEREUX</span>
-    <span>VANDALISME À L'HÔPITAL — APPEL À TÉMOINS</span>
-    <span>INFORMATIONS À TRANSMETTRE AUX BELAZUR</span>
+    <span>AFFAIRE BOO — CHRONOLOGIE COMPLÈTE RÉVÉLÉE</span>
+    <span>DAME DIANE KIDNAPPÉE ET ABANDONNÉE EN MER</span>
     <span>PRIME DE 35 005 KCOINS SUR ALAN LEONHART</span>
     <span>ALAN LEONHART CONSIDÉRÉ DANGEREUX</span>
   </div>
 </div>
 
-<main style="padding:80px 32px;max-width:860px;margin:0 auto;text-align:center">
+<main style="padding:48px 0 80px">
+<div class="container">
 
-  <div style="display:inline-block;background:var(--cyan);color:var(--black);font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:800;letter-spacing:.25em;text-transform:uppercase;padding:4px 14px;margin-bottom:24px">Bientôt</div>
+  <div style="font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--gray);border-bottom:3px solid var(--black);padding-bottom:8px;margin-bottom:32px">Toutes les éditions</div>
 
-  <h1 style="font-family:'Barlow Condensed',sans-serif;font-size:64px;font-weight:900;text-transform:uppercase;line-height:1;margin-bottom:20px">Les enquêtes<br/><em style="font-style:normal;color:var(--cyan)">arrivent.</em></h1>
+  <div class="editions-grid">
 
-  <p style="font-size:18px;font-weight:300;line-height:1.7;color:#3A3A3A;max-width:520px;margin:0 auto 40px">La rédaction du Karmine Déchaîné prépare ses premières investigations de fond. Corruption, secrets, affaires non résolues — rien ne restera dans l'ombre.</p>
+    <!-- ÉDITION 002 en premier (la plus récente) -->
+    <article class="ed-card">
+      <div class="ed-placeholder"><img src="assets/img/logo-mascot.png" alt=""/></div>
+      <div class="ed-body">
+        <div class="ed-num">Édition N°002</div>
+        <h3 class="ed-title">Affaire Boo, Dame Diane : la vérité éclate</h3>
+        <div class="ed-date">Mai 2026</div>
+      </div>
+      <a href="editions/edition-002/index.html" class="ed-link">Lire →</a>
+    </article>
 
-  <div style="border:3px solid var(--black);border-left:6px solid var(--cyan);background:#fff;padding:28px;text-align:left;margin-bottom:40px">
-    <div style="font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan);margin-bottom:8px">En préparation</div>
-    <p style="font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:900;text-transform:uppercase;color:var(--black);margin-bottom:6px">Affaire Boo — qui est vraiment Alan Leonhart ?</p>
-    <p style="font-size:14px;font-weight:300;color:#6B6B6B">Notre équipe creuse. Les premières révélations dans la prochaine édition.</p>
+    <!-- ÉDITION 001 -->
+    <article class="ed-card">
+      <div class="ed-placeholder"><img src="assets/img/logo-mascot.png" alt=""/></div>
+      <div class="ed-body">
+        <div class="ed-num">Édition N°001</div>
+        <h3 class="ed-title">Inauguration — Affaire Boo — Scoops</h3>
+        <div class="ed-date">Mai 2026</div>
+      </div>
+      <a href="editions/edition-001/index.html" class="ed-link">Lire →</a>
+    </article>
+
+    <!-- AJOUTER LES NOUVELLES ÉDITIONS ICI -->
+
   </div>
 
-  <a href="editions/edition-001/index.html" style="display:inline-block;background:var(--black);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;padding:12px 28px;transition:background .2s">← Retour à l'édition</a>
-
+</div>
 </main>
 
 <!-- ENCART TÉMOIGNAGE -->
@@ -81,8 +94,8 @@
         <p style="font-size:12px;color:#999;font-weight:300">Journalisme indépendant, libre et sans chaînes.</p>
       </div>
       <nav style="display:flex;gap:20px;flex-wrap:wrap">
-        <a href="editions/edition-001/index.html" style="font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#fff">Éditions</a>
-        <a href="enquetes.html" style="font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--cyan)">Enquêtes</a>
+        <a href="editions.html" style="font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--cyan)">Éditions</a>
+        <a href="enquetes.html" style="font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#fff">Enquêtes</a>
         <a href="interviews.html" style="font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:#fff">Interviews</a>
       </nav>
     </div>
