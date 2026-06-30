@@ -1,0 +1,120 @@
+/* ============================================================
+   ALERTE SÉCURITÉ — MODE URGENCE
+   Retirer alert.css et alert.js quand l'alerte est levée
+   ============================================================ */
+
+/* ── BANDEAU FIXE ── */
+#kd-alert-bar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 99999;
+  background: #b71c1c;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-bottom: 3px solid #ff1744;
+  box-shadow: 0 0 32px rgba(255,23,68,.6), 0 2px 0 #ff1744;
+}
+#kd-alert-bar .al-label {
+  background: #000;
+  color: #ff1744;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px; font-weight: 900;
+  letter-spacing: .25em; text-transform: uppercase;
+  padding: 0 16px; height: 100%;
+  display: flex; align-items: center; gap: 7px;
+  flex-shrink: 0;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+}
+.al-label .al-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #ff1744;
+  display: inline-block;
+  animation: blink-label 0.8s step-end infinite;
+  flex-shrink: 0;
+}
+@keyframes blink-label {
+  0%,100% { opacity: 1; }
+  50%      { opacity: .3; }
+}
+#kd-alert-bar .al-track {
+  display: flex; gap: 48px;
+  animation: al-scroll 36s linear infinite;
+  white-space: nowrap;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 13px; font-weight: 900;
+  letter-spacing: .12em; text-transform: uppercase;
+  color: #fff;
+}
+#kd-alert-bar .al-track span::before { content: "⚠ "; color: #ff8a80; }
+@keyframes al-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ── DÉCALAGE HEADER ── */
+header.mast { margin-top: 36px !important; }
+header { margin-top: 36px !important; }
+
+/* ── VIGNETTE ROUGE — pulsation dramatique ── */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9990;
+  background: radial-gradient(ellipse at center, transparent 40%, rgba(183,28,28,.22) 100%);
+  animation: vignette-pulse 2s ease-in-out infinite;
+}
+@keyframes vignette-pulse {
+  0%,100% { opacity: .6; }
+  50%      { opacity: 1; }
+}
+
+/* ── FLASH ROUGE PÉRIODIQUE ── */
+@keyframes emergency-flash {
+  0%,89%,91%,93%,100% { background-color: transparent; }
+  90%,92%              { background-color: rgba(183,28,28,.07); }
+}
+body {
+  animation: emergency-flash 6s ease-in-out infinite;
+}
+
+/* ── TITRES EN ALERTE — bordure gauche rouge sur les h1 ── */
+.art-title, .hero-title, .feat-title {
+  position: relative;
+}
+.art-title::after, .hero-title::after {
+  content: '';
+  position: absolute;
+  left: -16px; top: 0; bottom: 0;
+  width: 4px;
+  background: #ff1744;
+  animation: title-bar-pulse 2s ease-in-out infinite;
+}
+@keyframes title-bar-pulse {
+  0%,100% { opacity: 1; transform: scaleY(1); }
+  50%      { opacity: .4; transform: scaleY(.8); }
+}
+
+/* ── BORDURE ROUGE SUR LE SITE ── */
+body {
+  outline: 3px solid rgba(183,28,28,.35);
+  outline-offset: -3px;
+}
+
+/* ── HERO IMAGE — filtre rouge ── */
+.hero-main-img, .art-hero-img {
+  filter: saturate(1.1) sepia(.1) hue-rotate(-10deg) brightness(.95);
+  box-shadow: inset 0 0 0 3px rgba(183,28,28,.4), 0 0 40px rgba(183,28,28,.2);
+}
+
+
+
+@media(prefers-reduced-motion: reduce) {
+  body, body::before, body::after { animation: none !important; }
+}
